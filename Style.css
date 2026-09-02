@@ -1,0 +1,645 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  color: #102a43;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 6%;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e8eef5;
+}
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+
+  color: #0b2d5c;
+
+  font-weight: 800;
+}
+
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 12px;
+
+  background: #0b2d5c;
+  color: #f4c430;
+
+  font-weight: 900;
+}
+
+
+.nav nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+
+.nav nav a {
+  color: #183b56;
+
+  text-decoration: none;
+
+  font-weight: 700;
+}
+
+
+.nav-cta {
+  background: #f4c430;
+
+  padding: 9px 16px;
+
+  border-radius: 999px;
+}
+
+
+.menu {
+  display: none;
+
+  background: none;
+
+  border: 0;
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 78vh;
+
+  padding: 80px 7%;
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  gap: 50px;
+
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8fbff,
+      #ffffff
+    );
+}
+
+
+.hero-copy {
+  max-width: 700px;
+}
+
+
+.eyebrow {
+  color: #f0b800;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  font-weight: 900;
+
+  margin: 0 0 12px;
+}
+
+
+.hero h1 {
+  font-size: clamp(48px, 7vw, 82px);
+
+  line-height: 0.98;
+
+  margin: 0;
+
+  color: #0b2d5c;
+}
+
+
+.hero h1 span {
+  color: #e7ae00;
+}
+
+
+.lead {
+  font-size: 20px;
+
+  max-width: 600px;
+
+  color: #486581;
+}
+
+
+.actions {
+  display: flex;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+
+  margin: 28px 0;
+}
+
+
+.button {
+  display: inline-block;
+
+  border: 0;
+
+  text-decoration: none;
+
+  font-weight: 900;
+
+  border-radius: 12px;
+
+  padding: 13px 20px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+}
+
+
+.primary {
+  background: #0b2d5c;
+
+  color: #ffffff;
+}
+
+
+.secondary {
+  border: 2px solid #0b2d5c;
+
+  color: #0b2d5c;
+
+  background: #ffffff;
+}
+
+
+.trust {
+  display: flex;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+
+  font-weight: 800;
+
+  color: #486581;
+}
+
+
+
+/* ================= HERO CARD ================= */
+
+.hero-card {
+  min-height: 430px;
+
+  border-radius: 30px;
+
+  background: #0b2d5c;
+
+  display: grid;
+
+  place-items: center;
+
+  text-align: center;
+
+  padding: 40px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 70px
+    rgba(11, 45, 92, 0.2);
+}
+
+
+.hero-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+
+  height: 360px;
+
+  border-radius: 50%;
+
+  border: 35px solid #f4c430;
+
+  right: -150px;
+
+  bottom: -170px;
+}
+
+
+.shine {
+  position: absolute;
+
+  top: 45px;
+
+  right: 55px;
+
+  color: #f4c430;
+
+  font-size: 55px;
+}
+
+
+.kk-big {
+  font-size: 150px;
+
+  font-weight: 1000;
+
+  color: #ffffff;
+
+  letter-spacing: -12px;
+}
+
+
+.hero-card p {
+  color: #ffffff;
+
+  font-size: 20px;
+}
+
+
+.hero-card strong {
+  color: #f4c430;
+}
+
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+  padding: 85px 7%;
+
+  max-width: 1300px;
+
+  margin: auto;
+}
+
+
+.section h2 {
+  font-size: clamp(34px, 5vw, 52px);
+
+  line-height: 1.05;
+
+  color: #0b2d5c;
+
+  margin: 0 0 35px;
+}
+
+
+
+/* ================= SERVICE CARDS ================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+.card {
+  padding: 28px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(11, 45, 92, 0.08);
+}
+
+
+.icon {
+  font-size: 35px;
+
+  color: #e7ae00;
+
+  font-weight: 900;
+}
+
+
+.card h3 {
+  color: #0b2d5c;
+
+  margin: 12px 0 5px;
+}
+
+
+.card p {
+  color: #627d98;
+}
+
+
+
+/* ================= ABOUT ================= */
+
+.split {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+  background: #f8fbff;
+
+  max-width: none;
+}
+
+
+.split > div {
+  max-width: 580px;
+}
+
+
+.split > div:last-child {
+  justify-self: start;
+
+  color: #486581;
+
+  font-size: 18px;
+}
+
+
+
+/* ================= HOW IT WORKS ================= */
+
+.steps {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+.steps > div {
+  padding: 28px;
+
+  border-top: 5px solid #f4c430;
+}
+
+
+.steps b {
+  font-size: 28px;
+
+  color: #0b2d5c;
+}
+
+
+.steps h3 {
+  color: #0b2d5c;
+}
+
+
+
+/* ================= WATER ================= */
+
+.water {
+  max-width: none;
+
+  background: #0b2d5c;
+
+  color: #ffffff;
+
+  display: grid;
+
+  grid-template-columns: 1fr 280px;
+
+  gap: 50px;
+
+  align-items: center;
+}
+
+
+.water h2 {
+  color: #ffffff;
+}
+
+
+.water p {
+  max-width: 750px;
+
+  color: #d9e2ec;
+}
+
+
+.water-badge {
+  width: 220px;
+
+  height: 220px;
+
+  border-radius: 50%;
+
+  display: grid;
+
+  place-items: center;
+
+  text-align: center;
+
+  background: #f4c430;
+
+  color: #0b2d5c;
+
+  font-size: 22px;
+}
+
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+}
+
+
+.contact form {
+  display: grid;
+
+  gap: 13px;
+}
+
+
+.contact input,
+.contact select,
+.contact textarea {
+  width: 100%;
+
+  padding: 14px;
+
+  border:
+    1px solid #bcccdc;
+
+  border-radius: 10px;
+
+  font: inherit;
+}
+
+
+.contact textarea {
+  min-height: 110px;
+
+  resize: vertical;
+}
+
+
+.contact small {
+  color: #627d98;
+}
+
+
+code {
+  background: #eef2f7;
+
+  padding: 2px 5px;
+
+  border-radius: 4px;
+}
+
+
+
+/* ================= FOOTER ================= */
+
+footer {
+  padding: 25px 7%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  border-top:
+    1px solid #e2e8f0;
+
+  color: #627d98;
+}
+
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+  .nav nav {
+    display: none;
+  }
+
+
+  .menu {
+    display: block;
+  }
+
+
+  .hero,
+  .split,
+  .contact,
+  .water {
+    grid-template-columns: 1fr;
+  }
+
+
+  .hero {
+    padding-top: 55px;
+  }
+
+
+  .grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+
+  .hero-card {
+    min-height: 300px;
+  }
+
+
+  .kk-big {
+    font-size: 110px;
+  }
+
+
+  .water-badge {
+    margin: auto;
+  }
+
+
+  .section {
+    padding: 65px 6%;
+  }
+
+  .brand img {
+    width: 120px;
+    height: 50px;
+    object-fit: contain;
+  }
+}
